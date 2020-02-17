@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from 'react';
+import useMutationObserver from './use-mutation-observer';
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = ({ cb = console.log }: any) => {
+	const [count, setCount] = useState(0);
+	const countRef = useRef(null);
+
+	useMutationObserver(countRef, cb);
+
+	return (
+		<div>
+			<button onClick={() => setCount(count + 1)}>Add</button>
+			<p ref={countRef}>{count}</p>
+		</div>
+	);
+};
 
 export default App;
