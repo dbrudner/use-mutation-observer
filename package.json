@@ -35,7 +35,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"publish": "tsc ./src/use-mutation-observer/index.tsx --outDir ./dist"
+		"publish": "tsc ./src/use-mutation-observer/index.tsx --outDir ./dist",
+		"prepublishOnly": "publish"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
