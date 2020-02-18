@@ -4,6 +4,8 @@ Have you ever wanted to use a mutation observer inside react? Me neither. Here's
 
 ## Example
 
+[Codesandbox demo here](https://codesandbox.io/s/determined-greider-x3f0n?fontsize=14&hidenavigation=1&theme=dark)
+
 ```
 import React, { useState, useRef } from 'react';
 import useMutationObserver from 'use-mutation-observer';
