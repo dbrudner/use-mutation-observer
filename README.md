@@ -6,7 +6,7 @@ Have you ever wanted to use a mutation observer inside react? Me neither. Here's
 
 ```
 import React, { useState, useRef } from 'react';
-import useMutationObserver from './use-mutation-observer';
+import useMutationObserver from 'use-mutation-observer';
 
 const App = () => {
   const [count, setCount] = useState(0);
